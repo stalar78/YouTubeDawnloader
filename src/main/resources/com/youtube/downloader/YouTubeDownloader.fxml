@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.youtube.downloader.YouTubeDownloaderController"
+      spacing="15" alignment="CENTER" prefWidth="450" prefHeight="350">
+
+    <!-- Поле для ссылки на видео -->
+    <TextField fx:id="videoUrlField" promptText="Enter YouTube video URL" prefWidth="400" />
+
+    <!-- Поле для сохранения с кнопкой -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="outputPathField" promptText="Enter download directory" prefWidth="320" />
+        <Button text="Browse" fx:id="browseOutputButton" />
+    </HBox>
+
+    <!-- Поле для куков с кнопкой -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="cookiesPathField" promptText="Enter path to cookies.txt (optional)" prefWidth="320" />
+        <Button text="Browse" fx:id="browseCookiesButton" />
+    </HBox>
+
+    <!-- Индикатор загрузки -->
+    <ProgressBar fx:id="progressBar" prefWidth="400" progress="0" />
+
+    <!-- Кнопка загрузки -->
+    <Button text="Download" fx:id="downloadButton" prefWidth="200" style="-fx-background-color: #007BFF; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+    <!-- Метка для статуса -->
+    <Label fx:id="statusLabel" text="Status: Waiting for input..." wrapText="true" prefWidth="400" />
+</VBox>
